@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hangman</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+
+  </head>
+  <body>
+    <h1> Hangman</h1>
+    <p> Fint the hidden word - Enter a letter</p>
+    <div class="game-container"> 
+    <svg height="250px" with="250px" class="figure-container">
+      <!-- shape-one -->
+      <line x1="60" y1="20" x2="150" y2="20" />
+      <line x1="150" y1="20" x2="150" y2="60" />
+      <line x1="60" y1="220" x2="60" y2="20" />
+       <line x1="30" y1="220" x2="90" y2="220" />
+        <!-- shape-head -->
+        <circle cx="150" cy="75" r="15"  class="figure-part" data-index="1"/> 
+        <!-- shape-body -->
+        <line x1="150" y1="90" x2="150" y2="150" class="figure-part" data-index="2"/> 
+        <!-- shape-arms -->
+        <line x1="120" y1="95" x2="150" y2="110" class="figure-part"data-index="3"/> 
+        <line x1="150" y1="110" x2="180" y2="95" class="figure-part"data-index="4"/> 
+       <!-- shape-legs -->
+       <line x1="130" y1="190" x2="150" y2="150" class="figure-part"data-index="5"/> 
+       <line x1="150" y1="150" x2="170" y2="190" class="figure-part"data-index="6"/> 
+       </svg>
+       
+       <div class="wrong-letters-container">
+         <div id="wrong-letters">
+           <p></p>
+           <span></span>
+         </div>
+       </div>
+       
+       <div class="word" id="word">
+         
+
+       </div>
+     </div>
+     
+     <!-- Final -->
+     <div class="popup-container" id="popup-container">
+       <div class="popup">
+         <h2 class="final-messsage" id=final-messsage></h2>
+         <button id="play-button">Play Again</button>
+       </div>
+     </div>
+       
+       <!-- Notification -->
+       <div class="notification-container" id="notification-container">
+         <p> You have already entered this letter</p>
+       </div>
+
+        
+      
+      
+      <script src="script.js"></script>
+  </body>
+</html>
